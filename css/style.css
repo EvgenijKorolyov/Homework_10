@@ -1,0 +1,89 @@
+.grid_container {
+    max-width: 940px;
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    display: grid;
+    gap: 2px;
+    grid-auto-rows: minmax(160px, auto);
+}
+
+section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.sectionA {
+    background-image: url(../img/hero-demo1.jpg);
+}
+.sectionB {
+    background-image: url(../img/hero-demo5.jpg);
+    justify-content: end;
+}
+.sectionC {
+    background-image: url(../img/hero-demo4.jpg);
+    justify-content: end;
+}
+.sectionD {
+    background-image: url(../img/hero-demo3.jpg);
+}
+.sectionE {
+    background-image: url(../img/hero-demo2.jpg);
+}
+.sectionF {
+    background-color: brown;
+    justify-content: space-between;
+}
+
+@media (min-width: 600px) {
+    .grid_container {
+    grid-template-columns: 1fr 1fr;
+    }
+    .sectionA {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+    .sectionB {
+        grid-row: 3 / 6;
+    }
+    .sectionC {
+        grid-row: 6 / 7;
+    }
+    .sectionD {
+        grid-row: 3 / 4;
+    }
+    .sectionE {
+        grid-row: 4 / 5;
+    }
+    .sectionF {
+        grid-row: 5 / 7;
+    }
+}
+
+@media (min-width: 800px) {
+    .grid_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .sectionA {
+        grid-column: 1 / 2;
+        grid-row: 1 / 6;
+    }
+    .sectionB {
+        grid-row: 1 / 4;
+    }
+    .sectionC {
+        grid-row: 4 / 6;
+    }
+    .sectionD {
+        grid-row: 1 / 2;
+    }
+    .sectionE {
+        grid-row: 2 / 3;
+    }
+    .sectionF {
+        grid-row: 3 / 6;
+    }
+}
